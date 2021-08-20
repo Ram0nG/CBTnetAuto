@@ -1,0 +1,85 @@
+
+Sudo rm -r /home/ubuntu/ .ssh/
+
+if you need to copy in paste on a EVE-NG from html5 on a MAC you will need to click SHIFT+CONTROL+COMMAND to paste in GUACAMOLE
+
+Enable
+Config t
+Hostname R1
+Username mario priv 15 password password1
+Ip domain-name cisco.com
+Ip ssh ver 2
+Crypto key gen rsa mod 1024
+Line  vty 0 4
+Transport input ssh
+Login local
+!
+vrf definition MGMT
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ interface GigabitEthernet0/0
+ vrf forwarding MGMT
+ ip address 192.168.1.41 255.255.255.0
+do wr
+
+
+Enable
+Config t
+Hostname R2
+Username usa priv 15 password usapass
+Ip domain-name cisco.com
+Ip ssh ver 2
+Crypto key gen rsa mod 1024
+Line  vty 0 4
+Transport input ssh
+Login local
+!
+ address-family ipv4
+ exit-address-family
+ !
+ interface GigabitEthernet0/0
+ vrf forwarding MGMT
+ ip address 192.168.1.42 255.255.255.0
+do wr
+
+Enable
+Config t
+Hostname R3
+Username euro priv 15 password europass
+Ip domain-name cisco.com
+Ip ssh ver 2
+Crypto key gen rsa mod 1024
+Line  vty 0 4
+Transport input ssh
+Login local
+!
+vrf definition MGMT
+ address-family ipv4
+ exit-address-family
+ !
+ interface GigabitEthernet0/0
+ vrf forwarding MGMT
+ ip address 192.168.1.43 255.255.255.0
+do wr
+
+Enable
+Config t
+Hostname R4
+Username usa priv 15 password usapass
+Ip domain-name cisco.com
+Ip ssh ver 2
+Crypto key gen rsa mod 1024
+Line  vty 0 4
+Transport input ssh
+Login local
+!
+vrf definition MGMT
+ address-family ipv4
+ exit-address-family
+ !
+ interface GigabitEthernet0/0
+ vrf forwarding MGMT
+ ip address 192.168.1.44 255.255.255.0
+do wr

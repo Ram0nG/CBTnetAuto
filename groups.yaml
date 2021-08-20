@@ -1,0 +1,12 @@
+---
+
+euro_groups:
+    username: "euro"
+    password: "europass"
+
+usa_groups:
+    username: "usa"
+    password: "usapass"
+
+cisco_group:
+    platform: "ios"
