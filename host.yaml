@@ -1,0 +1,37 @@
+---
+
+R1:
+    username: "mario"
+    password: "password1"
+    platform: "ios"
+    hostname: "192.168.1.41"
+    groups:
+        cisco_group
+        euro_group
+
+  R2:
+    username: "mario"
+    password: "password1"
+    platform: "ios"
+    hostname: "192.168.1.42"
+    groups:
+        cisco_group 
+        usa_group 
+
+R3:
+    username: "mario"
+    password: "password1"
+    platform: "ios"
+    hostname: "192.168.1.43"
+    groups:
+        cisco_group
+        euro_group
+
+R4:
+    username: "mario"
+    password: "password1"
+    platform: "ios"
+    hostname: "192.168.1.44"
+    groups:
+        cisco_group
+        usa_group
